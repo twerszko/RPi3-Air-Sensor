@@ -2,4 +2,5 @@
 
 sudo pip3 install py-sds011 urlopen
 
-python3 air_sensor.py
+> /home/pi/air_sensor.log
+python3 -u air_sensor.py 2>&1 | ts '[%Y-%m-%d %H:%M:%S]' >> /home/pi/air_sensor.log

@@ -1,0 +1,15 @@
+[Unit]
+Description=Air Sensor Service
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/air-sensor
+ExecStart=/home/pi/air-sensor/run.sh
+
+# Restart very 24h
+Restart=always
+RestartSec=86400
+
+[Install]
+WantedBy=multi-user.target

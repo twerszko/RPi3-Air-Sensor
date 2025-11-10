@@ -4,7 +4,18 @@ Based on https://www.hackster.io/mjrobot/sensing-the-air-quality-58a074#toc-mqtt
 
 Measurements are published to a free ThingSpeak channel. https://thingspeak.com/channels/1606352 .
 
-### MATLAB charts
+## Instalation
+- air_sensor.py: fill in ids / keys
+
+#### Autostart
+```
+sudo cp air-sensor.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable air-sensor.service
+sudo systemctl start air-sensor.service
+```
+
+## MATLAB charts
 #### PM 2.5 [µg/m³] (avg. by hour)
 ```
 readChannelID = [];
